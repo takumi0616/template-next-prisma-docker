@@ -1,9 +1,7 @@
-// app/api/users/route.ts
 import { NextResponse, type NextRequest } from 'next/server'
-import prisma from '@/lib/prisma' // Prisma インスタンスへのパスを確認
+import prisma from '@/lib/prisma'
 
 export async function GET() {
-  // `request` を削除
   const users = await prisma.user.findMany()
   return new NextResponse(JSON.stringify(users), {
     headers: {

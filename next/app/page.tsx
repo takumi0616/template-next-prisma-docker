@@ -1,9 +1,8 @@
-// next/app/page.tsx
 'use client'
 
 import { useState, useEffect } from 'react'
 import styles from './page.module.css'
-import { User } from '@/types' // パスが正しいことを確認してください
+import { User } from '@/types'
 
 function Home() {
   const [users, setUsers] = useState<User[]>([])
